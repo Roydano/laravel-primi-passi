@@ -57,6 +57,8 @@
                 </div>
 
                 <h2>about</h2>
+                
+                <h3> {{ $nome }} {{ $cognome }}</h3>
             </div>
         </div>
     </body>

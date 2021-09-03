@@ -57,6 +57,16 @@
                 </div>
 
                 <h2>contatti</h2>
+
+                <h3> {{ $descr }}</h3>
+
+                <ul>
+                    @foreach($dati as $dato)
+                        <li>
+                            {{ $dato }}
+                        </li>                        
+                    @endforeach
+                </ul>
             </div>
         </div>
     </body>

@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
     $data = [
         'title' => 'Hello World',
     ];
+    return view('home', $data);
 })->name('homepage');
 
 Route::get('/about-me', function () {
@@ -26,9 +26,13 @@ Route::get('/about-me', function () {
         'cognome' => 'D\'Alessandro',
         'eta' => 30,
     ];
-    return view('about');
+    return view('about', $data);
 })->name('about-me');
 
 Route::get('/contact', function () {
-    return view('contact');
+    $data = [
+        'descr' => 'Se avete bisogno consultate i dati di seguito:',
+        'dati' => ['Cell: 1661212123', 'Mail: danilo@danilo.danit', 'Indirizzo: Via dei Danili Ignoti']
+    ];
+    return view('contact', $data);
 })->name('contact');
